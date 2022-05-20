@@ -16,6 +16,10 @@ public class Main {
 		Aluno alunoTeste = new Aluno();
 		Aluno outroAluno = new Aluno();
 		Aluno alunoNovato = new Aluno();
+		Aluno alunoObjeto;
+		alunoObjeto = new Aluno();
+		
+		alunoObjeto.idade = 18;
 		
 		alunoTeste.nome = "Rubem";
 		alunoTeste.idade = 33;
