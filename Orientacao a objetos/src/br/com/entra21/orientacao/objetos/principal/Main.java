@@ -27,13 +27,23 @@ public class Main {
 		outroAluno.nome = "Visitante";
 		outroAluno.idade = 18;
 		
-		System.out.println("Qual o nome do aluno novato?");
-		alunoNovato.nome = entrada.next();
+		alunoTeste.respoderChamada();
+		alunoTeste.respoderChamada();
+		alunoTeste.respoderChamada();
+		alunoTeste.respoderChamada();
 		
-		System.out.println("Qual a idade do aluno novato?");
-		alunoNovato.idade = entrada.nextByte();
+		//testando
 		
-		System.out.println("Bem vindo "+alunoNovato.nome);
+		
+		/*
+		 * System.out.println("Qual o nome do aluno novato?"); alunoNovato.nome =
+		 * entrada.next();
+		 * 
+		 * System.out.println("Qual a idade do aluno novato?"); alunoNovato.idade =
+		 * entrada.nextByte();
+		 * 
+		 * System.out.println("Bem vindo "+alunoNovato.nome);
+		 */
 	}
 
 }
