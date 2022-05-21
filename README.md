@@ -7,4 +7,4 @@ Practical content carried out in the classroom during the Entra21 project.
 
 | CLASS | SUBJECT |
 |------|---------|
-|Class 01 - 01|[Classes and Objects]()
+|Class 01|[Classes and Objects](./Orientacao%20a%20objetos/src/br/com/entra21/orientacao/objetos/principal/classes/)

@@ -16,7 +16,7 @@ public class Aluno {
 	
 	public byte respoderChamada() {
 		Scanner input = new Scanner(System.in);
-		System.out.println("O aluno "+this.nome+" esta ai?");
+		System.out.println("O aluno "+this.nome+" esta na "+Professor.instituicao);
 		String resposta = input.next();
 		if(resposta.equalsIgnoreCase("sim")) {
 			quantidadePresencas++;
