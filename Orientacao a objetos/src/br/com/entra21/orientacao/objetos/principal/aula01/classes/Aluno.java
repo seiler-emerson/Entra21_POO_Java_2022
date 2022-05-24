@@ -1,4 +1,4 @@
-package br.com.entra21.orientacao.objetos.principal.classes;
+package br.com.entra21.orientacao.objetos.principal.aula01.classes;
 
 import java.util.Scanner;
 
@@ -12,6 +12,10 @@ public class Aluno {
 	// na declaracao só tem, acesso e tipo de retorno
 	public Aluno() { //construtor vazio que ao utilizar o (new Aluno) ele é executado
 		
+	}
+	
+	public Aluno(String nomeLaDeFora) {
+		this.nome= nomeLaDeFora;
 	}
 	
 	public byte respoderChamada() {
