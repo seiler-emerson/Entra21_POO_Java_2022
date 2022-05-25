@@ -14,7 +14,6 @@ public class Pessoa {
 	}
 	public Pessoa() {
 		super();
-
 	}
 	public String getNome() {
 		return nome;
