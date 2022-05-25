@@ -7,4 +7,5 @@ Practical content carried out in the classroom during the Entra21 project.
 
 | CLASS | SUBJECT |
 |------|---------|
-|Class 01|[Classes and Objects](./Orientacao%20a%20objetos/src/br/com/entra21/orientacao/objetos/principal/classes/)
+|Class 01|[Classes and Objects](./Orientacao%20a%20objetos/src/br/com/entra21/orientacao/objetos/principal/aula01/classes/)
+|Class 02|[Inheritance](./Orientacao%20a%20objetos/bin/br/com/entra21/orientacao/objetos/principal/aula02/heranca/)
