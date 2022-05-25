@@ -5,10 +5,12 @@ public class Professor {
 	// Atributos static sao de dominio da CLASSE e nao de cada objeto
 	//entao nenhum objeto dessa classe tem esse tipo de atributo
 	//para fazer acessos static basta informar a Classe.oQueVoceQuer, sem utilizar o new
+	
 	public static String instituicao="Proway";
 	
 	// Atributos devem ser private e se possive
 	// criar gets e sets para quem realmente precisa
+	
 	private String nome;
 	private byte idadeAtual;
 	private byte quantidadeAlunos;
@@ -20,7 +22,7 @@ public class Professor {
 	public Professor(String novoNome, byte idade) {
 		this.nome=novoNome;
 		this.idadeAtual=idade;
-		
+	
 		//construtor com paramentros
 		//pode inicializar alguns argumentos ou todos os atributos.
 	}
@@ -37,6 +39,14 @@ public class Professor {
 	
 	public byte getIdade() {
 		return this.idadeAtual;
+	}
+	
+	public void setquantidadeAlunos(byte quantidadeAlunos) {
+		this.quantidadeAlunos = quantidadeAlunos;
+	}
+	
+	public byte getQuantidadeAlunos() {
+		return this.quantidadeAlunos;
 	}
 	
 }
