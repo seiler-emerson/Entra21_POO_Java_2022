@@ -1,21 +1,42 @@
 package br.com.entra21.orientacao.objetos.principal.aula02.heranca;
 
-public class Diretor {
-	private String nome;
-	private byte idade;
+public class Diretor extends Pessoa{
+
+	//removi os atributos comuns
+	//mantive os especificos
+	
 	private String cursoAtual;
 	private byte quantidadeProfessores;
-	
 	public Diretor() {
-		
-	}
-	
-	public Diretor(String nome, byte idade) {
-		this.nome = nome;
-		this.idade = idade;
+		super();
 	}
 	
 	public void realizarApresentacao() {
-		System.out.println("Oi meu nome é "+this.nome+" e tenho "+this.idade+" anos");
+		System.out.println("Oi meu nome é "+getNome()+ " e minha idade é "+ this.getIdade());
 	}
+
+	public String getCursoAtual() {
+		return cursoAtual;
+	}
+
+	public void setCursoAtual(String cursoAtual) {
+		this.cursoAtual = cursoAtual;
+	}
+
+	public byte getQuantidadeProfessores() {
+		return quantidadeProfessores;
+	}
+
+	public void setQuantidadeProfessores(byte quantidadeProfessores) {
+		this.quantidadeProfessores = quantidadeProfessores;
+	}
+
+	
+	public Diretor(String nome, byte idade, String cpf, String cursoAtual, byte quantidadeProfessores) {
+		super(nome, idade, cpf);
+		this.cursoAtual = cursoAtual;
+		this.quantidadeProfessores = quantidadeProfessores;
+	}
+	
+	
 }
