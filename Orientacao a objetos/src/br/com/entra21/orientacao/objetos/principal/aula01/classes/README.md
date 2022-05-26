@@ -13,12 +13,12 @@
 
 - Main accessing Aluno and Professor
 
-![Example Main](./example_1.png)
+![Example Main](./img/example_1.png)
 
 - Class Aluno
 
-![Example Aluno](./example_2.png)
+![Example Aluno](./img/example_2.png)
 
 - Class Professor
 
-![Example Professor](./example_3.png)
+![Example Professor](./img/example_3.png)

@@ -7,6 +7,9 @@ import br.com.entra21.orientacao.objetos.principal.aula01.classes.Professor;
 import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Diretor;
 import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Funcionario;
 import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Pessoa;
+import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Atleta;
+import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Nadador;
+import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Velocista;
 
 public class Main {
 
@@ -21,6 +24,7 @@ public class Main {
 			System.out.println("0 - Sair");
 			System.out.println("1 - Aprender Classes");
 			System.out.println("2 - Aprender Heranca");
+			System.out.println("3 - Polimorfismo");
 			opcao = entrada.nextByte();
 
 			switch (opcao) {
@@ -32,6 +36,9 @@ public class Main {
 				break;
 			case 2:
 				aprenderHeranca();
+				break;
+			case 3:
+				aprenderPolimorfismo();
 				break;
 			default:
 				System.out.println("Por favor, escolhar uma opcao valida.");
@@ -47,32 +54,10 @@ public class Main {
 		// Porem o System.i e uma chamada static pq
 		// para acessar o in do system nao precisa criar o new.
 
-		// === DIRETOR 1 === //
-		Diretor diretor1 = new Diretor();
-		diretor1.realizarApresentacao();	
-		diretor1.setNome("Emerson");
-		diretor1.setIdade((byte) 27);
-		diretor1.setObervacao("obervando");
-
-		// === DIRETOR 2 === //
-		Diretor diretor2 = new Diretor();
-
-		// === PROFESSOR JAVA === //
-		Professor professorJava = new Professor();
-		professorJava.setNome("Oliota");
-		
-		// === PROFESSORA INGLES === //
-		Professor professoraIngles = new Professor("Isabelle", (byte) 30);
-		System.out.println("Nome dela =" + professoraIngles.getNome());
-		professoraIngles.setNome("Isabelle 2");
-		System.out.println("Nome dela =" + professoraIngles.getNome());
-		System.out.println("A idade dela e " + professoraIngles.getIdade());
-		System.out.println("Os professores trabalham na " + Professor.instituicao);
-
 		// === ALUNO 1 === //
 		Aluno aluno1 = new Aluno();
 		aluno1.nome = "Emerson";
-		
+
 		// === ALUNO 2 === //
 		Aluno aluno2 = new Aluno();
 		aluno2.nome = "Fulano";
@@ -107,10 +92,59 @@ public class Main {
 		funcionario1.setCargoAtual("Programador Jr");
 		funcionario1.setSalario(4000);
 		funcionario1.setObervacao("obervando");
-		System.out.println("Ola meu nome e " + funcionario1.getNome() + " e tenho " + funcionario1.getIdade() + " anos");
+		System.out
+				.println("Ola meu nome e " + funcionario1.getNome() + " e tenho " + funcionario1.getIdade() + " anos");
 
 		Funcionario funcionario2 = new Funcionario("Bruno", (byte) 22, "384798237", "programador Jr", 2500.5f);
 		funcionario2.getCpf();
+
+		// === DIRETOR 1 === //
+		Diretor diretor1 = new Diretor();
+		diretor1.realizarApresentacao();
+		diretor1.setNome("Emerson");
+		diretor1.setIdade((byte) 27);
+		diretor1.setObervacao("obervando");
+
+		// === DIRETOR 2 === //
+		Diretor diretor2 = new Diretor();
+
+		// === PROFESSOR JAVA === //
+		Professor professorJava = new Professor();
+		professorJava.setNome("Oliota");
+
+		// === PROFESSORA INGLES === //
+		Professor professoraIngles = new Professor("Isabelle", (byte) 30);
+		System.out.println("Nome dela =" + professoraIngles.getNome());
+		professoraIngles.setNome("Isabelle 2");
+		System.out.println("Nome dela =" + professoraIngles.getNome());
+		System.out.println("A idade dela e " + professoraIngles.getIdade());
+		System.out.println("Os professores trabalham na " + Professor.instituicao);
+	}
+
+	private static void aprenderPolimorfismo() {
+
+		Atleta cr7 = new Atleta();
+		cr7.comemorarVitoria();
+		cr7.aprenderComDerrota();
+
+		System.out.println("----------------------------");
+		
+		Nadador michaelPhelps = new Nadador();
+		michaelPhelps.setNome("Michael Phelps");
+		Nadador sergioMichael = new Nadador("Sérgio Michael", (byte) 39, 23, 40, "Piscína", "Sunga e Touca");
+		sergioMichael.comemorarVitoria(); // procura primeiro na minha classe Nadador, como o método com polimorfismo não foi acionado com o envio de uma frase, usara o metodo da herança.
+		michaelPhelps.comemorarVitoria(); // procura primeiro na minha classe Nadador, como o método com polimorfismo não foi acionado com o envio de uma frase, usara o metodo da herança.
+		
+		sergioMichael.comemorarVitoria(" Foi árduo, mas consegui!"); // Enviando uma frase, acessar o metodo com polimorfismo na classe Nadador e apresenta a frase enviada.
+		sergioMichael.comemorarVitoria(""); // Enviando frase vazia, acessar o metodo com polimorfismo na classe Nadador e apresenta a frase redundante
+		
+		System.out.println("----------------------------");
+
+		Velocista usainBolt = new Velocista();
+		usainBolt.setNome("Usain Bolt");
+		usainBolt.comemorarVitoria();
+
+		System.out.println("----------------------------");
 	}
 
 }

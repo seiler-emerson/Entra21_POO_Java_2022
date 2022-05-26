@@ -7,5 +7,5 @@
 
 - Funcionário using attributes of Pessoas.
 
-![Example Main](./example_01.png)
-![Example Main](./example_02.png)
+![Example Main](./img/example_01.png)
+![Example Main](./img/example_02.png)
