@@ -10,6 +10,16 @@ import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Pessoa;
 import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Atleta;
 import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Nadador;
 import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Velocista;
+import br.com.entra21.orientacao.objetos.principal.aula04.conceitospoo.Ponto;
+import br.com.entra21.orientacao.objetos.principal.aula04.conceitospoo.Reta;
+import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Aviao;
+import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Capivara;
+import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Carro;
+import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Et;
+import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Gato;
+import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Humano;
+import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Onca;
+import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Planta;
 
 public class Main {
 
@@ -24,7 +34,9 @@ public class Main {
 			System.out.println("0 - Sair");
 			System.out.println("1 - Aprender Classes");
 			System.out.println("2 - Aprender Heranca");
-			System.out.println("3 - Polimorfismo");
+			System.out.println("3 - Aprender Polimorfismo");
+			System.out.println("4 - Apreender Conceitos POO");
+			System.out.println("5 - Aprender Polimorfismo com Interface");
 			opcao = entrada.nextByte();
 
 			switch (opcao) {
@@ -39,6 +51,12 @@ public class Main {
 				break;
 			case 3:
 				aprenderPolimorfismo();
+				break;
+			case 4:
+				aprenderConceitosPOO();
+				break;
+			case 5:
+				aprenderPolimorfismoInterface();
 				break;
 			default:
 				System.out.println("Por favor, escolhar uma opcao valida.");
@@ -145,6 +163,80 @@ public class Main {
 		usainBolt.comemorarVitoria();
 
 		System.out.println("----------------------------");
+	}
+
+	private static void aprenderConceitosPOO() {
+		// A classe ponto tem alta coesao pois ele e preciso nas suas responsabilidades
+		Ponto pontoAlto = new Ponto(30,10000);
+		Ponto esquerdaBaixo = new Ponto(-20,-100);
+		
+		// A classe reta é agregada por pontos que podem nao estar inicializados.
+		// A associacao de reta e ponto e de um para muitos respctivamente.
+		Reta torta = new Reta();
+		Reta retaDiagonal = new Reta(pontoAlto, esquerdaBaixo);
+		
+	}
+	
+	private static void aprenderPolimorfismoInterface() {
+		
+		//
+		Humano emerson = new Humano();
+		emerson.setNome("Emerson");
+		emerson.apresentarSe();
+		emerson.alimentar("Hot-dog");
+		emerson.locomover();
+		emerson.comunicar("Ola");
+		
+		System.out.println("=======================");
+		
+		Gato gamora = new Gato("Gamora", new Pessoa("Mayara", (byte)34, "123123123-12"));
+		gamora.alimentar("racao");
+		gamora.comunicar("cade a racao doido?");
+		gamora.locomover();
+		
+		System.out.println("=======================");
+		
+		Capivara robson = new Capivara();
+		robson.alimentar("agua");
+		robson.comunicar("");
+		robson.locomover();
+		
+		System.out.println("=======================");
+		
+		Planta maracuja = new Planta("Passiflora edulis Sims");
+		maracuja.alimentar("bife");
+		maracuja.comunicar("");
+		maracuja.locomover();
+		
+		System.out.println("=======================");
+		
+		Et babyyoda = new Et("Baby Yoda");
+		babyyoda.alimentar("SAPOS");
+		babyyoda.comunicar("");
+		babyyoda.locomover();
+		
+		System.out.println("=======================");
+		
+		Onca oncapintada = new Onca("Onca Pintada");
+		oncapintada.alimentar("CARNE");
+		oncapintada.comunicar("");
+		oncapintada.locomover();
+		
+		System.out.println("=======================");
+		
+		Carro celta = new Carro();
+		celta.abastecer("GASOLINA");
+		celta.acelerar(100);
+		celta.freiar();
+		
+		System.out.println("=======================");
+		
+		Aviao comercial = new Aviao();
+		comercial.setModelo("Boeing 737");
+		System.out.println(comercial.freiar());
+		comercial.acelerar(870.5f);
+		comercial.freiar();
+		comercial.abastecer("QUEROSENE");
 	}
 
 }
