@@ -11,3 +11,4 @@ Practical content carried out in the classroom during the Entra21 project.
 |Class 02|[Inheritance](./Orientacao%20a%20objetos/src/br/com/entra21/orientacao/objetos/principal/aula02/heranca/)
 |Class 03|[Polymorphism](./Orientacao%20a%20objetos/src/br/com/entra21/orientacao/objetos/principal/aula03/polimorfismo/)
 |Class 04|[Interfaces](./Orientacao%20a%20objetos/src/br/com/entra21/orientacao/objetos/principal/aula04/interfaces/)
+|Class 05|[Practical Class](./Orientacao%20a%20objetos/src/br/com/entra21/orientacao/objetos/principal/aula05/revisao/)
