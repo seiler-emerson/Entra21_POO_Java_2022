@@ -20,6 +20,7 @@ import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Gato;
 import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Humano;
 import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Onca;
 import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Planta;
+import br.com.entra21.orientacao.objetos.principal.aula05.revisao.Revisao;
 
 public class Main {
 
@@ -37,6 +38,7 @@ public class Main {
 			System.out.println("3 - Aprender Polimorfismo");
 			System.out.println("4 - Apreender Conceitos POO");
 			System.out.println("5 - Aprender Polimorfismo com Interface");
+			System.out.println("6 - Revisao");
 			opcao = entrada.nextByte();
 
 			switch (opcao) {
@@ -57,6 +59,9 @@ public class Main {
 				break;
 			case 5:
 				aprenderPolimorfismoInterface();
+				break;
+			case 6:
+				revisarPOO();
 				break;
 			default:
 				System.out.println("Por favor, escolhar uma opcao valida.");
@@ -175,6 +180,8 @@ public class Main {
 		Reta torta = new Reta();
 		Reta retaDiagonal = new Reta(pontoAlto, esquerdaBaixo);
 		
+		System.out.println("O ponto representado em esquerdaBaixo tem a corrdenada X em: "+esquerdaBaixo.getCoordenadaX());
+		
 	}
 	
 	private static void aprenderPolimorfismoInterface() {
@@ -238,5 +245,13 @@ public class Main {
 		comercial.freiar();
 		comercial.abastecer("QUEROSENE");
 	}
+	
+	private static void revisarPOO() {
+		Revisao.revisar();
+	}
 
 }
+
+
+
+
